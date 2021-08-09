@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast.js')
 
 
 const app = express()
+const port =process.env.PORT || 3000
 
 //path for express
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -101,6 +102,6 @@ app.get('*',(req,res)=>{
         name: "Nitesh",
         errorMessage:'Page not found'})
 })
-app.listen(3000,()=>{
-    console.log("server runnung on port 3000")
+app.listen(port,()=>{
+    console.log("server runnung on port:"+ port )
 })
